@@ -1,0 +1,143 @@
+/* Estilos para aula43.html */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #d6d6d6;
+    color: #1f2937;
+}
+
+main {
+    width: min(960px, calc(100% - 32px));
+    margin: 32px auto;
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    border: 10px solid #000;
+    background: #e2e2e2;
+}
+
+.selecionado{
+    border-color: #092b67;
+    background: #f10000;
+}
+
+#caixaNovoFuncionalidades,
+#caixaCursos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 24px;
+    gap: 18px;
+    background: #e2e2e2;
+}
+
+#caixaNovoFuncionalidades {
+    border-right: 4px solid #000;
+}
+
+.caixaFuncionalidades,
+.caixaFuncionalidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input[type="text"] {
+    width: 260px;
+    padding: 12px 14px;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px;
+    background: #fff;
+    color: #1f2937;
+    font-size: 1rem;
+}
+
+button {
+    width: 260px;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #092b67;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button + button {
+    margin-top: 8px;
+}
+
+button:hover {
+    opacity: 0.94;
+}
+
+#caixaCursos {
+    align-items: flex-start;
+    padding: 36px 24px;
+}
+
+#caixaCursos .curso-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border: 2px solid #979797;
+    border-radius: 12px;
+    background: #c6c6c6;
+}
+
+#caixaCursos .curso-card:last-child {
+    margin-bottom: 0;
+}
+
+#caixaCursos .curso-card span {
+    color: #2d3748;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#caixaCursos .curso-card input[type="radio"] {
+    accent-color: #fff;
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+        border-width: 8px;
+    }
+
+    #caixaNovoFuncionalidades,
+    #caixaCursos {
+        padding: 24px;
+    }
+
+    #caixaNovoFuncionalidades {
+        border-right: none;
+        border-bottom: 4px solid #000;
+    }
+
+    button,
+    input[type="text"] {
+        width: 100%;
+    }
+}

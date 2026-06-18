@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle at top, #1f2937 0%, #111827 45%, #0b1220 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #eff6ff;
+}
+
+.caixa {
+    width: min(430px, 92vw);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 24px;
+    background: rgba(15, 23, 42, 0.88);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(10px);
+}
+
+.caixa input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    font-size: 16px;
+    text-align: center;
+    color: #f8fafc;
+    background: rgba(30, 41, 59, 0.95);
+    outline: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.caixa input:focus {
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+}
+
+.caixa button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.25);
+    transition: transform 0.15s ease, filter 0.2s ease;
+}
+
+.caixa button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.caixa button:active {
+    transform: translateY(0);
+}
+
+#somar { background: linear-gradient(135deg, #10b981, #059669); }
+#subtrair { background: linear-gradient(135deg, #f59e0b, #d97706); }
+#multiplicar { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+#dividir { background: linear-gradient(135deg, #fb7185, #e11d48); }
+
+.resultado {
+    margin-top: 16px;
+    min-height: 28px;
+    text-align: center;
+    font-weight: 700;
+    color: #e0f2fe;
+    font-size: 18px;
+    text-shadow: 0 2px 6px rgba(8, 47, 73, 0.35);
+}
