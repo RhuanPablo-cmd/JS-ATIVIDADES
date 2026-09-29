@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#18241e">
+    <title>Calculadora | Aula 74</title>
+    <link rel="stylesheet" href="aula74.css">
+</head>
+
+<body>
+    <main class="calc" id="calc" aria-label="Calculadora">
+        <header class="div_nome" id="div_nome">
+            <span class="marca">RH</span>
+            <h1>Calculadora</h1>
+            <span class="indicador" aria-hidden="true"></span>
+        </header>
+
+        <div class="div_display" id="div_display">
+            <p id="display" class="display" aria-live="polite" aria-atomic="true">0</p>
+        </div>
+
+        <div class="div_teclas" id="div_teclas" aria-label="Teclas">
+            <button id="t_ligar" class="tecla tecla_util" type="button" data-action="power">ON</button>
+            <button id="tlimpar" class="tecla tecla_util" type="button" data-action="clear">AC</button>
+            <button id="t_apagar" class="tecla tecla_util" type="button" data-action="delete" aria-label="Apagar último caractere" title="Apagar último caractere">⌫</button>
+            <button id="t_div" class="tecla tecla_operador" type="button" data-value="/" aria-label="Dividir">÷</button>
+
+            <button id="t7" class="tecla num" type="button" data-value="7">7</button>
+            <button id="t8" class="tecla num" type="button" data-value="8">8</button>
+            <button id="t9" class="tecla num" type="button" data-value="9">9</button>
+            <button id="t_vezes" class="tecla tecla_operador" type="button" data-value="*" aria-label="Multiplicar">×</button>
+
+            <button id="t4" class="tecla num" type="button" data-value="4">4</button>
+            <button id="t5" class="tecla num" type="button" data-value="5">5</button>
+            <button id="t6" class="tecla num" type="button" data-value="6">6</button>
+            <button id="t_menos" class="tecla tecla_operador" type="button" data-value="-" aria-label="Subtrair">−</button>
+
+            <button id="t1" class="tecla num" type="button" data-value="1">1</button>
+            <button id="t2" class="tecla num" type="button" data-value="2">2</button>
+            <button id="t3" class="tecla num" type="button" data-value="3">3</button>
+            <button id="t_mais" class="tecla tecla_operador" type="button" data-value="+" aria-label="Somar">+</button>
+
+            <div class="teclas_parenteses">
+                <button id="t_abre" class="tecla tecla_extra" type="button" data-value="(" aria-label="Abrir parêntese">(</button>
+                <button id="t_fecha" class="tecla tecla_extra" type="button" data-value=")" aria-label="Fechar parêntese">)</button>
+            </div>
+            <button id="t0" class="tecla num tecla_zero" type="button" data-value="0">0</button>
+            <button id="t_virgula" class="tecla tecla_extra" type="button" data-value="," aria-label="Vírgula decimal">,</button>
+            <button id="t_igual" class="tecla tecla_igual" type="button" data-action="equals" aria-label="Calcular">=</button>
+        </div>
+    </main>
+
+    <script src="aula74.js"></script>
+</body>
+</html>
