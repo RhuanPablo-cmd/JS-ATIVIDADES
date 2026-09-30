@@ -1,5 +1,6 @@
 const numero = document.getElementById("numero")
 
+
 let promise = new Promise((res, nres) => {
     let resultado = true
     let temp = 3000
