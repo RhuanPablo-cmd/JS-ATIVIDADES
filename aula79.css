@@ -1,0 +1,154 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	display: grid;
+	place-items: center;
+	padding: 24px;
+	background-color: #e9eee8;
+	background-image: radial-gradient(#b7c7bd 0.7px, transparent 0.7px);
+	background-size: 18px 18px;
+	color: #f4f3ec;
+	font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.timer {
+	width: min(100%, 440px);
+	padding: 30px;
+	overflow: hidden;
+	border: 1px solid #34514a;
+	border-radius: 12px;
+	background: #19312e;
+	box-shadow: 0 22px 55px #1c39302b, 0 3px 8px #1c39301f;
+	animation: aparecer 500ms ease-out both;
+}
+
+.div_data {
+	margin-bottom: 10px;
+	color: #c0d0c6;
+	font-size: 0.9rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.div_relogio {
+	padding: 18px 12px;
+	border-block: 1px solid #42625a;
+	color: #f2c078;
+	font-family: Consolas, "Courier New", monospace;
+	font-size: clamp(2.7rem, 13vw, 4.3rem);
+	font-variant-numeric: tabular-nums;
+	line-height: 1;
+	text-align: center;
+}
+
+.def_alarme {
+	display: grid;
+	gap: 9px;
+	margin-top: 24px;
+	color: #e5e9e2;
+	font-size: 0.95rem;
+	text-align: left;
+}
+
+#hora_alarme {
+	color: #f2c078;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.def_alarme br {
+	display: none;
+}
+
+#tmp_alarme {
+	width: 100%;
+	min-height: 46px;
+	padding: 10px 12px;
+	border: 1px solid #6a8178;
+	border-radius: 6px;
+	outline: none;
+	background: #f4f3ec;
+	color: #19312e;
+	font: inherit;
+	font-variant-numeric: tabular-nums;
+}
+
+#tmp_alarme:focus-visible {
+	border-color: #f2c078;
+	box-shadow: 0 0 0 3px #f2c07855;
+}
+
+.comandos {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	margin-top: 16px;
+}
+
+.comandos button {
+	min-height: 46px;
+	padding: 10px 16px;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	font: inherit;
+	font-weight: 700;
+	cursor: pointer;
+	transition: transform 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.comandos button:hover {
+	transform: translateY(-2px);
+}
+
+.comandos button:focus-visible {
+	outline: 3px solid #f4f3ec;
+	outline-offset: 3px;
+}
+
+#btn_ativar {
+	background: #f2c078;
+	color: #26342d;
+}
+
+#btn_ativar:hover {
+	background: #ffd28d;
+}
+
+#btn_parar {
+	border-color: #779087;
+	background: transparent;
+	color: #f4f3ec;
+}
+
+#btn_parar:hover {
+	border-color: #e4ebe4;
+	background: #ffffff0d;
+}
+
+@keyframes aparecer {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 420px) {
+	body {
+		padding: 16px;
+	}
+
+	.timer {
+		padding: 24px 20px;
+	}
+}
+
