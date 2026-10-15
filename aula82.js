@@ -8,3 +8,4 @@ let larguraPalco=palco.offsetWidth
 let alturaPalco=palco.offsetHeight
 let bolas=[]
 let numBolas=0
+
