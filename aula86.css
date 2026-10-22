@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    padding: clamp(1rem, 3vw, 2rem);
+    gap: 1.25rem;
+    color: #edf4f5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(65, 102, 116, 0.3), transparent 52%),
+        linear-gradient(145deg, #20292d, #111719 72%);
+}
+
+#controles {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: min(100%, 1100px);
+    margin-inline: auto;
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+}
+
+#controles > .controles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.55rem;
+    min-width: 150px;
+}
+
+#controles label {
+    color: #a9c2c9;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+}
+
+#num_objetos {
+    margin: 0;
+    color: #f4fbfc;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#txt_qtde {
+    width: 100%;
+    min-height: 2.65rem;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 0.7rem;
+    outline: none;
+    color: #f4fbfc;
+    font: inherit;
+    background: rgba(8, 14, 16, 0.45);
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+#txt_qtde:focus-visible {
+    border-color: #75d5c4;
+    box-shadow: 0 0 0 3px rgba(117, 213, 196, 0.18);
+}
+
+button {
+    min-height: 2.65rem;
+    padding: 0.65rem 1rem;
+    border: 0;
+    border-radius: 0.7rem;
+    color: #10201e;
+    font: inherit;
+    font-weight: 700;
+    background: #75d5c4;
+    cursor: pointer;
+    transition: transform 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background: #94e6d7;
+    box-shadow: 0 7px 18px rgba(42, 172, 149, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible {
+    outline: 3px solid rgba(148, 230, 215, 0.45);
+    outline-offset: 3px;
+}
+
+#btn_remover {
+    color: #ffe1e1;
+    background: rgba(214, 91, 91, 0.16);
+    border: 1px solid rgba(255, 132, 132, 0.26);
+}
+
+#btn_remover:hover {
+    background: rgba(214, 91, 91, 0.3);
+    box-shadow: 0 7px 18px rgba(172, 58, 58, 0.18);
+}
+
+#palco {
+    position: relative;
+    flex: 1;
+    width: min(100%, 1100px);
+    min-height: 220px;
+    margin-inline: auto;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 1.25rem;
+    background:
+        radial-gradient(circle, rgba(255, 255, 255, 0.12) 1px, transparent 1.5px) 0 0 / 24px 24px,
+        rgba(5, 10, 12, 0.25);
+    box-shadow: inset 0 1px 25px rgba(0, 0, 0, 0.18);
+}
+
+.bola {
+    position: absolute;
+    border-radius: 50%;
+}
+
+@media (max-width: 560px) {
+    body {
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+
+    #controles {
+        gap: 0.85rem;
+        border-radius: 1rem;
+    }
+
+    #controles > .controles {
+        flex: 1 1 130px;
+    }
+
+    #controles > .controles:last-child {
+        flex-basis: 100%;
+    }
+
+    #btn_remover {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button,
+    #txt_qtde {
+        transition: none;
+    }
+}
